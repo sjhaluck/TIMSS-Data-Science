@@ -51,7 +51,40 @@ The project will cover a variety of analyses regarding data collected. The proje
 - store processed data (`pandas.to_csv`)
 
 #### Data Models
+_** Regression **_
+- identifying variables of interest
+- create dummy variables for string objects (`pandas.get_dummies`)
+- split the data for training and testing (`sklearn.model_selection.train_test_split`)
+- create and train the linear regression models (`statsmodels.api.OLS`)
+- explore relative weights of variables in regression models
+- create predictions and confidence intervals for test dataset (`statsmodels.api.OLS.predict`, `statsmodels.api.OLS.get_prediction`)
+- evaluate effectiveness of models and confidence intervals
+- visualize models (`seaborn`, `matplotlib`)
 
+_** Classification **_
+- identifying and gathering variables of interest
+- split the data for training and testing (`sklearn.model_selection.train_test_split`)
+- create base models
+  - `sklearn.ensemble.RandomForestClassifier`
+  - `xgboost.XGBClassifier`
+  - `sklearn.neighbors.KNeighborsClassifier`
+- set up parameter grids for optimization
+- fit and optimize base model with grid search of parameters (`sklearn.model_selection.GridSearchCV`)
+- display results and accuracy (`sklearn.metrics.confusion_matrix`)
+- compare similarity between different models
+
+_** Recommendation **_
+- gather assessment item information
+- drop irrelevant information to construct user_item dataframe
+- create collection of helper functions to:
+  - identify similar users (`find_similar_users`)
+  - gather specific item information (`get_item_info`)
+  - gather items assessed by a user (`get_user_items`)
+  - create ranked user-to-user recommendations for new items (`user_user_recs`)
+  - implement FunkSVD to estimate score on previously unknown items (`FunkSVD`)
+  - estimate scores for unassessed items for a user (`user_item_predict`)
+  - implement custom sigmoid activation function for smoother predictions (`sig`)
+- test recommendation engine
 
 #### Evaluation
 
