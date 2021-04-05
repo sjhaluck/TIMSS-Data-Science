@@ -32,13 +32,28 @@ The project will cover a variety of analyses regarding data collected. The proje
 - `sklearn`
 - `xgboost`
 
-#### Technique
+#### Data Gathering and Processing Technique
+- gather and organize data for variety of SPSS files (`glob`, `pandas.read_spss`)
+- gather item information and metadata (`pandas.read_excel`)
+- drop unnecessary/irrelevant columns (`pandas.drop`)
+- simplify and combine assessment scores for easier application
+- average student assessment scores to a single number
+- explore data structure (`pandas.info()`, `pandas.describe()`)
+- visualize basic relationships (`matplotlib`, `seaborn`)
+- record initial observation and plan for data preparation
+- perform data preparation on each dataset
+  - drop irrelevant information for that specific data (`pandas.drop`)
+  - convert datatypes for appropriate analysis (`pandas.astype`)
+  - give columns more descriptive names (`pandas.rename`)
+  - perform any necessary transformations (`pandas.apply`)
+  - average columns into like groups (`pandas.groupby`)
+  - join data from other tables when helpful to the analysis (`pandas.join`)
+- store processed data (`pandas.to_csv`)
+
+#### Data Models
 
 
-## Models
-
-
-## Evaluation
+#### Evaluation
 
 
 ## Conclusion
