@@ -99,3 +99,8 @@ Overall, the model could be improved by including relevant averages for student 
 - test recommendation engine
 
 #### Evaluation
+The recommendation system takes into account user assessment history to find users with similar experience. From there, it finds new assessment items from the similar users and ranks them based on prevalence (number of users who assessed the item) and difficulty (average assessment score). The system then selects 10 items to recommend to the user as new study items.
+
+With the additional analysis of FunkSVD and a sigmoid activation function, the recommendations estimate the user's performance on the recommended assessment items. The user can then decide how to best use their resources to prepare for future assessments. A user could focus on reviewing items with high predictions (items with a high chance of success), low predictions (items with a low chance of success), or items with an unclear prediction (items on which a user could have more influence on the outcome).
+
+The recommended items are significant and clearly based on numerical evidence, but the predicted scores are not as reliable. Due to the unpredictable nature of estimating unknowns with a random sample of 99 other students with the FunkSVD algorithm, the predicted scores for the 10 recommended assessment items can vary significantly depending on the sample. For example, in the tests run for comparison, there were 3 items out of 10 that had significantly different predictions. Therefore, users should use the predictions of the recommendation system loosely as they decide which problems to study first.
